@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# displays information about the holbertonschool file.
+
+FILE="holbertonschool"
+
+if [ -e "$FILE" ]
+then
+    echo "school file exists"
+    if [ ! -s "$FILE" ]
+    then
+        echo "school file does not exist"
+    else
+        echo "school file is empty"
+    fi
+    if [ -f "$FILE" ]
+    then
+        echo "school file is not empty"
+    fi
+else
+    echo "school is a regular file"
+fi
